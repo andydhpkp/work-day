@@ -69,3 +69,13 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.table td, .table th {
+  padding: 2rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.colorTable {
+  width: 80%;
+}
