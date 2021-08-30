@@ -1,3 +1,5 @@
+var inputEl = document.getElementsByTagName('input');
+
 //To display current date in the header
 var now = moment().format('MMMM Do YYYY');
 var currentDateEl = document.getElementById('currentDay');
@@ -14,9 +16,11 @@ function checkHour() {
 
         var id = i.toString();
         var idCheck = document.getElementById(id);
+        //add 9 to i to reflect written time on the schedule
+        var scheduleTime = i + 9;
 
         //Add 9 to i to reflect written time on the schedule
-        if (timeCheck > (i + 9)) {
+        if (timeCheck > (scheduleTime)) {
             idCheck.setAttribute('style', 'background-color:grey;');
         } else if (timeCheck === (i + 9)) {
             idCheck.setAttribute('style', 'background-color:green;');
@@ -33,12 +37,27 @@ function eachHour() {
     setTimeout(setInterval(checkHour, (1000 * 60 * 60)), timeLeft);
 }
 
-//Allow for user input
-function taskName() {
-    //Maybe do it by class? have it be an onclick function?
+//save tasks to local storage
+function saveTask(id) {
+    var savedTaskValue = document.getElementById(id).value.trim();
+    localStorage.setItem(id, savedTaskValue);
+}
+
+//write tasks to placeholder text in order to persist
+function writeTask() {
+    for(i = 0; i < inputEl.length; i++) {
+        var idNum = i.toString() + 'Text';
+        var goals = localStorage.getItem(idNum);
+        if (goals === null) {
+            goals = "";
+        }
+        inputEl[i].setAttribute('placeholder', goals);
+    }
 }
 
 
 checkHour();
 
 eachHour();
+
+writeTask();

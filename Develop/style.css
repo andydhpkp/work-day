@@ -80,3 +80,19 @@ textarea{
   width: 70%;
   background-color: #17a2b8;
 }
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1%;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input[type=text]:focus {
+  border: 0;
+}
+
+::placeholder {
+  color: black;
+}
