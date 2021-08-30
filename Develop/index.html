@@ -30,9 +30,59 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row" class="timeTable">9 AM</th>
+            <td colspan="5" class="colorTable" id="0"><input type="text" id="0Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('0Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">10 AM</th>
+            <td colspan="5" class="colorTable" id="1"><input type="text" id="1Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('1Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">11 AM</th>
+            <td colspan="5" class="colorTable" id="2"><input type="text" id="2Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('2Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">12 PM</th>
+            <td colspan="5" class="colorTable" id="3"><input type="text" id="3Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('3Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">1 PM</th>
+            <td colspan="5" class="colorTable" id="4"><input type="text" id="4Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('4Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2 PM</th>
+            <td colspan="5" class="colorTable" id="5"><input type="text" id="5Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('5Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3 PM</th>
+            <td colspan="5" class="colorTable" id="6"><input type="text" id="6Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('6Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">4 PM</th>
+            <td colspan="5" class="colorTable" id="7"><input type="text" id="7Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('7Text')">Save Event</button></td>
+          </tr>
+          <tr>
+            <th scope="row">5 PM</th>
+            <td colspan="5" class="colorTable" id="8"><input type="text" id="8Text"></td>
+            <td><button type="button" class="btn btn-outline-info" onclick="saveTask('8Text')">Save Event</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
